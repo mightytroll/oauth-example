@@ -1,0 +1,12 @@
+{
+    "log": {
+        "console": {
+            "level": "debug",
+            "silent": false
+        }
+    },
+    "xola": {
+        "url": "http://xola.local/api",
+        "timeout": 30000
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "plugin-groupon",
+    "version": "0.1.0",
+    "description": "Xola-Groupon integration",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.esm.js",
+        "debug": "node --inspect src/index.esm.js",
+        "watch": "nodemon --inspect src/index.esm.js",
+        "test": "jest --runInBand",
+        "test:watch": "jest --watchAll --runInBand",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/xola/plugin-groupon.git"
+    },
+    "author": "Xola",
+    "license": "UNLICENCED",
+    "engines": {
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "config": "^3.3.1",
+        "cors": "^2.8.5",
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "moment-timezone": "^0.5.31",
+        "mongoose": "^5.9.11",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.9.5",
+        "babel-jest": "^25.3.0",
+        "jest": "^25.3.0",
+        "jest-environment-node": "^25.3.0",
+        "mongodb-memory-server": "^6.5.2",
+        "nodemon": "^2.0.3",
+        "prettier": "^2.0.5",
+        "supertest": "^4.0.2"
+    }
+}

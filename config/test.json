@@ -1,0 +1,10 @@
+{
+    "log": {
+        "console": {
+            "silent": true
+        }
+    },
+    "xola": {
+        "url": "http://xola.test/api"
+    }
+}

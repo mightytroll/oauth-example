@@ -1,0 +1,11 @@
+{
+    "log": {
+        "sumologic": {
+            "host": null,
+            "path": null
+        }
+    },
+    "xola": {
+        "apiKey": null
+    }
+}
