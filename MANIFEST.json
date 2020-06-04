@@ -1,0 +1,8 @@
+{
+    "name": "OAuth Example",
+    "description": "Example provides necessary Actions and Services to support OAuth2 authorization with 3rd parties.",
+    "authorization": {
+        "strategy": "popup",
+        "popupUrl": "http://localhost:3000/oauth/authorize"
+    }
+}

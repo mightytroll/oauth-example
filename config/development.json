@@ -1,12 +1,26 @@
 {
+    "db": {
+        "url": "mongodb://localhost:27017/app_oauth"
+    },
     "log": {
         "console": {
             "level": "debug",
             "silent": false
         }
     },
+    "oauth": {
+        "clientId": null,
+        "tokenHost": null,
+        "authorizePath": null,
+        "tokenPath": null,
+        "redirectUri": null,
+        "scope": null
+    },
     "xola": {
         "url": "http://xola.local/api",
-        "timeout": 30000
+        "timeout": 30000,
+        "elrond": {
+            "url": "http://localhost:8807"
+        }
     }
 }

@@ -5,6 +5,9 @@
             "path": null
         }
     },
+    "oauth": {
+        "clientSecret": null
+    },
     "xola": {
         "apiKey": null
     }

@@ -2,15 +2,37 @@ import axios from "axios";
 import config from "config";
 import moment from "moment-timezone";
 
-const client = axios.create({
+const xolaClient = axios.create({
     baseURL: config.get("xola.url"),
+    timeout: config.get("xola.timeout"),
+    headers: { "X-API-KEY": config.get("xola.apiKey") }
+});
+
+const elrondClient = axios.create({
+    baseURL: config.get("xola.elrond.url"),
     timeout: config.get("xola.timeout"),
     headers: { "X-API-KEY": config.get("xola.apiKey") }
 });
 
 export const Xola = {
     async fetchUser(userId, headers = {}) {
-        let { data } = await client.get(`/users/${userId}`, { headers });
+        let { data } = await xolaClient.get(`/users/${userId}`, { headers });
+
+        return data;
+    },
+
+    async fetchInstallation(id) {
+        Log.debug("Fetching the installation...");
+
+        let { data } = await elrondClient.get(`/installations/${id}`);
+
+        return data;
+    },
+
+    async updateInstallation(id, properties) {
+        Log.debug("Updating the installation...");
+
+        let { data } = await elrondClient.put(`/installations/${id}`, properties);
 
         return data;
     },
